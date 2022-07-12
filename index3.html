@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English - 3</title>
+    <link rel="shortcut icon" href="media/img/3.jpg" type="image/x-icon">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="btn">
+        <Button> << </Button>
+    </div>
+    <h1>🧭Easy English : <span> Day⇋3</span></h1>
+    <div class="container">
+          <div class="main-video-container">
+              <video src="media/Videos/21 - কীভাবে ইংরেজিতে Visa Interview দিবেন.mp4" loop  controls autoplay  class="main-video" ></video>
+              <h3 class="main-vid-title">3 ⇛(1) :  কিভাবে ইংরেজিতে Visa Interview দিবেন ?</h3>
+          </div>
+
+        
+        <div class="video-list-container">
+
+               <div class="list active">
+                     <video src="media/Videos/21 - কীভাবে ইংরেজিতে Visa Interview দিবেন.mp4"  class="list-video"></video>
+                     <h3 class="list-title">3 ⇛(1) :  কিভাবে ইংরেজিতে Visa Interview দিবেন ?</h3>
+                </div>
+               <div class="list">
+                     <video src="media/Videos/22 - বিমানবন্দরে ইংরেজি কথোপকথন.mp4"  class="list-video"></video>
+                     <h3 class="list-title">3 ⇛(2) :  কিভাবে ইংরেজিতে বিমানবন্দরে কথা বলতে পারি ?</h3>
+                </div>
+               <div class="list">
+                     <video src="media/Videos/23 - ইংরেজিতে নিজের ছুটি নিয়ে বর্ণনা দিন.mp4" class="list-video"></video>
+                     <h3 class="list-title">3 ⇛ (3) : কীভাবে ইংরেজিতে নিজের ছুটি নিয়ে বর্ণনা দিতে পারি ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/24 - স্কুল ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার.mp4"class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (4) :  স্কুল ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার </h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/25 - কলেজ ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার.mp4"class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (5) :  কলেজ ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/26 - বিশ্ববিদ্যালয় ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার.mp4" class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (6) : বিশ্ববিদ্যালয় ছাত্রদের জন্য দৈনন্দিন ইংরেজি ব্যবহার</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/27 - কীভাবে ইংরেজিতে আপনার শিক্ষকের সঙ্গে কথা বলবেন.mp4" class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (7) : কিভাবে ইংরেজিতে আপনার শিক্ষকের সঙ্গে কথা বলবেন ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/28 - কীভাবে ইংরেজিতে একজন মানুষের বর্ণনা দিবেন.mp4" class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (8) : কিভাবে ইংরেজিতে একজন মানুষের বর্ণনা দিবেন ? </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/29 - কিছু বলার না থাকলে কী বলবেন - ইংরেজিতে স্মল টক করা শিখুন.mp4"  class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (9) : কিভাবে ইংরেজিতে কিছু বলার না থাকলে কী বলবেন ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/30 - Formal অনুষ্ঠানে নিজেকে কীভাবে ইংরেজিতে Introduce করবেন.mp4" class="list-video"></video>
+                    <h3 class="list-title">3 ⇛ (10) : কিভাবে ইংরেজিতে Formal অনুষ্ঠানে নিজেকে Introduce করবেন ?
+                    </h3>
+                </div>    
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <!-- customs js file link -->
+    <!-- ========================================================== -->
+     <script>
+        let listVideo = document.querySelectorAll('.video-list-container .list');
+        let mainVideo = document.querySelector('.main-video-container .main-video');
+        let title = document.querySelector('.main-video-container .main-vid-title');
+
+        listVideo.forEach(video =>{
+             video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text ;
+                };
+             };
+        });
+        //button part
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', ()=>{
+            window.history.back();
+        })
+    </script>  
+    <!-- ============================================================ -->
+</body>
+</html>

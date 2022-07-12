@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English - 1</title>
+    <link rel="shortcut icon" href="media/img/3.jpg" type="image/x-icon">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="btn">
+        <Button> << </Button>
+    </div>
+    <h1>🧭Easy English : <span> Day⇋1</span></h1>
+    <div class="container">
+          <div class="main-video-container">
+              <video src="media/Videos/Videos - Google Drive.mp4" loop  controls   class="main-video" poster="media/img/1/1.jpg" autoplay ></video>
+              <h3 class="main-vid-title">1 ⇛ (1) :  কিভাবে ইংরেজিতে অপরিচিত কারো সাথে First time কথা বলবো ?</h3>
+          </div>
+
+        
+        <div class="video-list-container">
+
+               <div class="list active">
+                     <video src="media/Videos/Videos - Google Drive.mp4"  class="list-video" poster="media/img/1/1.jpg" ></video>
+                     <h3 class="list-title">1 ⇛ (1) : কিভাবে ইংরেজিতে অপরিচিত কারো সাথে First time কথা বলবো ?</h3>
+                </div>
+               <div class="list">
+                     <video src="media/Videos/Videos - Google Drive_2.mp4" class="list-video" poster="media/img/1/3.PNG" ></video>
+                     <h3 class="list-title">1 ⇛ (2) : কিভাবে Introduce হবার পরেও  আরো কথা আগাতে পারি ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/Videos - Google Drive_3.mp4"class="list-video" poster="media/img/1/2.1.jpg" ></video>
+                    <h3 class="list-title">1 ⇛ (3) : কিভাবে ইংরেজিতে Questions করতে হয় ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/Videos - Google Drive_4.mp4"class="list-video" poster="media/img/1/1.4.jpg" ></video>
+                    <h3 class="list-title">1 ⇛ (4) : কিভাবে Parts of Human Body ইংরেজিতে বলতে পারি ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 5 - How to Tell the Time in English.mp4" class="list-video" poster="media/img/1/5.webp" ></video>
+                    <h3 class="list-title">1 ⇛ (5) : কিভাবে সময়(Time) নিয়ে কথা বলতে পারি ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 6 - কীভাবে ইংরেজিতে নতুন বন্ধু বানাবেন.mp4" class="list-video" poster="media/img/1/7.jpg" ></video>
+                    <h3 class="list-title">1 ⇛ (6) : কিভাবে ইংরেজিতে নতুন বন্ধু(New friend) বানাবেন ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 7 - ২ বন্ধু মিলে কীভাবে ইংরেজিতে কথা বলবেন.mp4" class="list-video" poster="media/img/1/6.jpg" ></video>
+                    <h3 class="list-title">1 ⇛ (7) : কিভাবে ইংরেজিতে দুই(two freinds)বন্ধু মিলে কথা বলবেন ? </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 8 - ইংরেজিতে কীভাবে গল্প বলবেন.mp4"  class="list-video" poster="media/img/1/8.jpg"></video>
+                    <h3 class="list-title">1 ⇛ (8) : কিভাবে ইংরেজিতে গল্প(story) বলবেন?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 9 - ইংরেজিতে নিজের শখ নিয়ে কথা বলুন.mp4" class="list-video"poster="media/img/1/9.jpg"></video>
+                    <h3 class="list-title">1 ⇛ (9) : কিভাবে ইংরেজিতে নিজের শখ(hobby) নিয়ে কথা বলবেন ?
+                    </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/Class 10 - আপনার পছন্দের মুভি নিয়ে ইংরেজিতে কথা বলুন.mp4" class="list-video" poster="media/img/1/10.jpg"></video>
+                    <h3 class="list-title">1 ⇛ (10) : কিভাবে ইংরেজিতে আপনার পছন্দের মুভি (Favorite movie) নিয়ে কথা বলবেন ?</h3>
+                </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <!-- customs js file link -->
+    <!-- ========================================================== -->
+     <script>
+        let listVideo = document.querySelectorAll('.video-list-container .list');
+        let mainVideo = document.querySelector('.main-video-container .main-video');
+        let title = document.querySelector('.main-video-container .main-vid-title');
+
+        listVideo.forEach(video =>{
+             video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text ;
+                };
+             };
+        });
+        //button part
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', ()=>{
+            window.history.back();
+        })
+    </script>  

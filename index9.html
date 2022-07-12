@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English</title>
+    <link rel="shortcut icon" href="media/img/3.jpg" type="image/x-icon">
+    <style>
+        body{
+            background-color: #050d1b;
+            color: antiquewhite;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+        }
+        .btn{
+            text-align: start;
+        }
+        button{
+            margin: 20px 20px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            background: #000000;
+            color: antiquewhite;
+            border-radius: 20px;
+            border: 2px solid green;
+        }
+        button:hover{
+            
+            border-radius: 5px;
+            border: 2px solid green;
+            cursor: pointer;
+            background: rgba(34, 34, 200, 0.355);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <Button> << </Button>
+        </div>
+        <div>
+            <embed style="margin-left:450px ;" src="media/pdf/Ghore Boshe Spoken English (Munzereen Shahid).pdf" width="900px" height="900px" type="">
+        </div>
+    </div>
+    
+      <!-- customs js file link -->
+    <!-- ========================================================== -->
+    <script>
+        let listVideo = document.querySelectorAll('.video-list-container .list');
+        let mainVideo = document.querySelector('.main-video-container .main-video');
+        let title = document.querySelector('.main-video-container .main-vid-title');
+
+        listVideo.forEach(video =>{
+             video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text ;
+                };
+             };
+        });
+        //button part
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', ()=>{
+            window.history.back();
+        })
+    </script>  
+    <!-- ============================================================ -->
+</body>
+</script>
+</html>

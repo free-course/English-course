@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English - 4</title>
+    <link rel="shortcut icon" href="media/img/3.jpg" type="image/x-icon">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="btn">
+        <Button> << </Button>
+    </div>
+    <h1>🧭Easy English : <span> Day⇋4</span></h1>
+    <div class="container">
+          <div class="main-video-container">
+              <video src="media/Videos/31 - কীভাবে ইংরেজিতে নিজের দেশের বাড়ির বর্ণনা দিবেন.mp4" loop  controls autoplay  class="main-video" ></video>
+              <h3 class="main-vid-title">4 ⇛ (1) :  কিভাবে ইংরেজিতে নিজের দেশের বাড়ির বর্ণনা দিবেন ?</h3>
+          </div>
+
+        
+        <div class="video-list-container">
+
+               <div class="list active">
+                     <video src="media/Videos/31 - কীভাবে ইংরেজিতে নিজের দেশের বাড়ির বর্ণনা দিবেন.mp4"  class="list-video"></video>
+                     <h3 class="list-title">4 ⇛ (1) : কিভাবে ইংরেজিতে নিজের দেশের বাড়ির বর্ণনা দিবেন ?</h3>
+                </div>
+               <div class="list">
+                     <video src="media/Videos/32 - ইংরেজিতে কীভাবে পরিকল্পনা করবেন.mp4" class="list-video"></video>
+                     <h3 class="list-title">4 ⇛ (2) : কিভাবে ইংরেজিতে পরিকল্পনা করবেন ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/33 - কীভাবে ইংরেজিতে নিজের Daily Routine নিয়ে কথা বলবেন.mp4"class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (3) : কিভাবে ইংরেজিতে নিজের Daily Routine নিয়ে কথা বলবেন ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/34.mp4"class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (4) : কিভাবে job interview সম্পর্কে কথা বলতে পারি ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/35.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (5) : কিভাবে চাকরি/job সম্পর্কে  কথা বলতে পারি ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/36.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (6) : কিভাবে ইংরেজিতে presentation দিবেন ?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/37.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (7) : কিভাবে ইংরেজিতে daly office কথা বলবেন ? </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/38 - মায়ের সাথে ইংরেজি শিখুন.mp4"  class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (8) : কিভাবে ইংরেজিতে মায়ের সাথে কথা বলবেন?</h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/39 - বাবার সাথে ইংরেজি শিখুন.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (9) : কিভাবে ইংরেজিতে বাবার সাথে কথা বলবেন ?
+                    </h3>
+                </div>    
+                <div class="list">
+                    <video src="media/Videos/40 - কীভাবে ইংরেজিতে আত্মীয়দের সাথে কথা বলবেন.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (10) : কিভাবে ইংরেজিতে আত্মীয়দের সাথে কথা বলবেন ?</h3>
+                </div>
+                <div class="list">
+                    <video src="media/Videos/Class 65 - ২৫টি ইংরেজি শব্দ যা আমরা প্রতিনিয়ত ভুল উচ্চারণ করি.mp4" class="list-video"></video>
+                    <h3 class="list-title">4 ⇛ (11) : ২৫টি ইংরেজি শব্দ যা আমরা প্রতিনিয়ত ভুল উচ্চারণ করি </h3>
+                </div> 
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <!-- customs js file link -->
+    <!-- ========================================================== -->
+     <script>
+        let listVideo = document.querySelectorAll('.video-list-container .list');
+        let mainVideo = document.querySelector('.main-video-container .main-video');
+        let title = document.querySelector('.main-video-container .main-vid-title');
+
+        listVideo.forEach(video =>{
+             video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text ;
+                };
+             };
+        });
+        //button part
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', ()=>{
+            window.history.back();
+        })
+    </script>  
+    <!-- ============================================================ -->
+</body>
+</html>
